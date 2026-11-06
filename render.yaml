@@ -1,0 +1,14 @@
+# OpenSTEM Telegram bot — free Render web service
+# The bot uses Telegram long polling and serves a health-check URL.
+# Render Free may sleep after 15 minutes without incoming HTTP requests.
+services:
+  - type: web
+    name: openstem-telegram-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: PYTHONUNBUFFERED
+        value: "1"
