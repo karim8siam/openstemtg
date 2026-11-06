@@ -13,7 +13,7 @@ from bot.keyboards import (
     COUNTRY_FLAGS,
     RECRUITMENT_URL,
 )
-from bot.config import LEAD_EMAIL
+from bot.config import LEAD_EMAIL, TELEGRAM_CHANNEL
 
 WAITING_PAGE_SIZE = 3
 
@@ -34,6 +34,7 @@ def format_waiting_university_card(uni):
         card += f"📚 <b>Focus &amp; Pathways:</b> {programs[:150]}\n"
     card += f"🔗 <a href='{html.escape(url)}'>Official University Portal ↗</a>\n"
     card += f"🎓 <b>Recruitment Platform:</b> <a href='{RECRUITMENT_URL}'>OpenSTEM Recruitment</a>\n"
+    card += f"📢 <b>Telegram Channel:</b> <a href='{TELEGRAM_CHANNEL}'>OpenSTEM (@openstemedu)</a>\n"
     card += f"✉️ <b>Admissions Inquiry:</b> <code>{LEAD_EMAIL}</code>"
     return card
 

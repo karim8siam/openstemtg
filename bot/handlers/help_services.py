@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.constants import ParseMode
 from telegram.ext import ContextTypes
-from bot.config import LEAD_EMAIL
+from bot.config import LEAD_EMAIL, TELEGRAM_CHANNEL
 
 STUDENTS_WEB_URL = "https://openstemrecruitment.com/students.html"
 GMAIL_STUDENT_HELP_URL = f"https://mail.google.com/mail/?view=cm&fs=1&to={LEAD_EMAIL}&su=Student%20Support%20%26%20Guidance%20Inquiry"
@@ -33,16 +33,18 @@ HOW_HELP_TEXT = f"""
 • <b>14. Pre-departure information:</b> Locate official enrolment, arrival, and orientation checklists for your target university.
 
 —
+📢 <b>Official Telegram Channel:</b> <a href="{TELEGRAM_CHANNEL}">OpenSTEM (@openstemedu)</a>
 ✉️ <b>Direct Advisor Email:</b> <code>{LEAD_EMAIL}</code>
 🎓 <b>Recruitment Platform:</b> <a href="{STUDENTS_WEB_URL}">openstemrecruitment.com/students</a>
 
-<i>Have questions about any of these 14 support areas? Tap the button below to email directly!</i>
+<i>Have questions about any of these 14 support areas? Tap the button below to email directly or join our Telegram channel!</i>
 """
 
 def get_how_help_keyboard():
     return InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("🎓 View on Recruitment Website ↗", url=STUDENTS_WEB_URL)
+            InlineKeyboardButton("🎓 View on Recruitment Website ↗", url=STUDENTS_WEB_URL),
+            InlineKeyboardButton("📢 OpenSTEM Channel ↗", url=TELEGRAM_CHANNEL),
         ],
         [
             InlineKeyboardButton(f"✉️ {LEAD_EMAIL}", url=GMAIL_STUDENT_HELP_URL)

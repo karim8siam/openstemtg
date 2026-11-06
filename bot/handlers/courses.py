@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.constants import ParseMode
 from telegram.ext import ContextTypes
-from bot.config import LEAD_EMAIL, URLS
+from bot.config import LEAD_EMAIL, URLS, TELEGRAM_CHANNEL
 
 YOUTUBE_URL = URLS["youtube"]
 GMAIL_COURSES_URL = f"https://mail.google.com/mail/?view=cm&fs=1&to={LEAD_EMAIL}&su=Free%20Courses%20%26%20Test%20Preparation%20Inquiry"
@@ -20,10 +20,11 @@ Get fully prepared for international admissions, standardized tests, and profess
 • <b>📄 LOR Preparation:</b> How to draft, structure, and request winning Letters of Recommendation from professors.
 
 📢 <b>Notice on Course Materials:</b>
-If any specific course, video, or practice material is currently missing, do not worry! We are constantly recording and releasing new lessons. You will get them <b>completely free</b> on our YouTube channel (<b>OpenSTEM Bangladesh</b>) as soon as possible.
+If any specific course, video, or practice material is currently missing, do not worry! We are constantly recording and releasing new lessons. You will get them <b>completely free</b> on our YouTube channel (<b>OpenSTEM Bangladesh</b>) and announced on our Telegram channel (<b>@openstemedu</b>) as soon as possible.
 
 —
 📺 <b>Official Channel:</b> <a href="{YOUTUBE_URL}">OpenSTEM Bangladesh on YouTube</a>
+📢 <b>Official Telegram Channel:</b> <a href="{TELEGRAM_CHANNEL}">OpenSTEM (@openstemedu)</a>
 ✉️ <b>Direct Advisor Email:</b> <code>{LEAD_EMAIL}</code>
 
 <i>Tap any test button below to start learning on our YouTube channel:</i>
@@ -43,7 +44,8 @@ def get_courses_keyboard():
             InlineKeyboardButton("📄 LOR (Recommendation Letters) ↗", url=YOUTUBE_URL),
         ],
         [
-            InlineKeyboardButton("📺 Watch OpenSTEM Bangladesh on YouTube ↗", url=YOUTUBE_URL),
+            InlineKeyboardButton("📺 OpenSTEM on YouTube ↗", url=YOUTUBE_URL),
+            InlineKeyboardButton("📢 OpenSTEM Channel ↗", url=TELEGRAM_CHANNEL),
         ],
         [
             InlineKeyboardButton(f"✉️ {LEAD_EMAIL}", url=GMAIL_COURSES_URL),

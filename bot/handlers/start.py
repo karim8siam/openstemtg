@@ -8,9 +8,12 @@ from bot.keyboards import (
 )
 from bot.config import LEAD_EMAIL, URLS
 
-WELCOME_TEXT = """
+WELCOME_TEXT = f"""
 ✨ <b>Welcome to OpenSTEM Official Bot!</b> ✨
 <i>Your student-first gateway to global STEM scholarships, graduate degrees, and academic funding.</i>
+
+📢 <b>Official Telegram Channel:</b> <a href="{URLS['telegram']}">OpenSTEM (@openstemedu)</a>
+<i>Join our channel for daily scholarship announcements, admission deadlines, and funded lab openings!</i>
 
 Choose an option below to begin:
 """
@@ -30,6 +33,7 @@ Tap any button below to visit our platforms, social media, or email us directly:
 • <b>Replicate:</b> <a href="{URLS['replicate']}">openstemreplicate.org</a>
 
 <b>Social Media &amp; Community:</b>
+• <b>Telegram:</b> <a href="{URLS['telegram']}">OpenSTEM Channel (@openstemedu)</a>
 • <b>YouTube:</b> <a href="{URLS['youtube']}">OpenSTEM YouTube Channel</a>
 • <b>Facebook:</b> <a href="{URLS['facebook']}">OpenSTEM Facebook Page</a>
 • <b>Discord:</b> <a href="{URLS['discord']}">OpenSTEM Discord Community</a>

@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.constants import ParseMode
 from telegram.ext import ContextTypes
-from bot.config import LEAD_EMAIL, URLS
+from bot.config import LEAD_EMAIL, URLS, TELEGRAM_CHANNEL
 
 DISCORD_URL = URLS["discord"]
 RECRUITMENT_URL = URLS["recruitment"]
@@ -26,10 +26,9 @@ Whether you are a university representative, research professor, educational ins
 🚀 <b>Let's do a powerful partnership and shape the future together.</b>
 
 —
-✉️ <b>Direct Contact for Partnership:</b>
-<code>{LEAD_EMAIL}</code>
-
+📢 <b>Official Telegram Channel:</b> <a href="{TELEGRAM_CHANNEL}">OpenSTEM (@openstemedu)</a>
 💬 <b>Discord Community:</b> <a href="{DISCORD_URL}">OpenSTEM Discord Server</a>
+✉️ <b>Direct Contact for Partnership:</b> <code>{LEAD_EMAIL}</code>
 
 <i>Tap below to email us your collaboration vision or proposal directly:</i>
 """
@@ -40,7 +39,10 @@ def get_partnership_keyboard():
             InlineKeyboardButton(f"✉️ {LEAD_EMAIL}", url=GMAIL_PARTNER_URL),
         ],
         [
-            InlineKeyboardButton("💬 Join Discord Community ↗", url=DISCORD_URL),
+            InlineKeyboardButton("📢 OpenSTEM Channel ↗", url=TELEGRAM_CHANNEL),
+            InlineKeyboardButton("💬 Discord Community ↗", url=DISCORD_URL),
+        ],
+        [
             InlineKeyboardButton("🎓 Recruitment Platform ↗", url=RECRUITMENT_URL),
         ],
         [

@@ -11,7 +11,7 @@ from bot.keyboards import (
     BRIDGE_URL,
     GMAIL_RESEARCH_URL,
 )
-from bot.config import LEAD_EMAIL
+from bot.config import LEAD_EMAIL, TELEGRAM_CHANNEL
 
 PROF_PAGE_SIZE = 3
 
@@ -52,8 +52,9 @@ def format_professor_card(prof):
         card += f"📧 <b>Faculty Email:</b> <code>{html.escape(email)}</code>\n"
     if source:
         card += f"🔗 <a href='{html.escape(source)}'>Official Faculty Profile ↗</a>\n"
-    card += f"✉️ <b>Direct Advisor Contact:</b> <code>{LEAD_EMAIL}</code>\n"
-    card += f"🌉 <b>OpenSTEM Bridge:</b> <a href='{BRIDGE_URL}'>openstembridge.space ↗</a>"
+    card += f"🌉 <b>OpenSTEM Bridge:</b> <a href='{BRIDGE_URL}'>openstembridge.space ↗</a>\n"
+    card += f"📢 <b>Telegram Channel:</b> <a href='{TELEGRAM_CHANNEL}'>OpenSTEM (@openstemedu)</a>\n"
+    card += f"✉️ <b>Direct Advisor Contact:</b> <code>{LEAD_EMAIL}</code>"
     return card
 
 async def start_professors_flow(update: Update, context: ContextTypes.DEFAULT_TYPE):

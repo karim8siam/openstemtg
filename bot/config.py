@@ -2,6 +2,7 @@ import os
 
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 LEAD_EMAIL = "shahriyarkarimsiam@gmail.com"
+TELEGRAM_CHANNEL = "https://t.me/openstemedu"
 
 # Official Ecosystem Links
 URLS = {
@@ -15,4 +16,5 @@ URLS = {
     "youtube": "https://youtube.com/@openstembd?si=9N6e2-WbFThrMCTL",
     "facebook": "https://www.facebook.com/profile.php?id=61595686350739",
     "discord": "https://discord.com/invite/tBBKtvFJzW",
+    "telegram": "https://t.me/openstemedu",
 }
