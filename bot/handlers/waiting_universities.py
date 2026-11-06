@@ -29,7 +29,7 @@ def format_waiting_university_card(uni):
 
     card = f"{flag} <b>{name}</b>\n"
     card += f"📍 <b>Location:</b> {location_str}\n"
-    card += f"🤝 <b>Status:</b> <i>Expecting International Students · Connected with OpenSTEM</i>\n"
+    card += f"📋 <b>Directory status:</b> <i>Research listing; not a confirmed OpenSTEM partnership</i>\n"
     if programs:
         card += f"📚 <b>Focus &amp; Pathways:</b> {programs[:150]}\n"
     card += f"🔗 <a href='{html.escape(url)}'>Official University Portal ↗</a>\n"
@@ -43,7 +43,7 @@ async def start_waiting_flow(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
     text = (
         f"🏛️ <b>Explore Your Waiting Universities</b>\n"
-        f"<i>Browse over {total_unis:,} institutions across 15 countries. These universities are actively expecting ambitious international students and are connected with the OpenSTEM network.</i>\n\n"
+        f"<i>Browse over {total_unis:,} institutions across 15 countries. These are university directory listings for research. Inclusion does not imply an OpenSTEM partnership or guarantee current admissions availability.</i>\n\n"
         f"👇 <b>Select a Country to see universities:</b>"
     )
     reply_markup = get_waiting_countries_keyboard(country_counts)
@@ -89,7 +89,7 @@ async def render_waiting_universities_results(message, context, is_edit=True):
 
     header = (
         f"🏛️ <b>Waiting Universities in {flag} {country_label}</b> ({total_count:,} Institutions)\n"
-        f"<i>These universities are open for student applications and admissions engagement.</i>\n"
+        f"<i>Verify current programs and admissions availability on each university’s official website.</i>\n"
         f"📄 <b>Page:</b> {page + 1}/{total_pages}\n\n"
     )
 
