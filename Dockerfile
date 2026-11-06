@@ -10,7 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY bot/ bot/
 COPY data/ data/
 
-# Ensure DB is populated
-RUN python3 bot/db.py
+# Use the committed, prebuilt SQLite database. Rebuilding it against existing FTS tables can fail.
+RUN test -s data/openstem.db
+RUN python3 -m compileall -q bot
 
 CMD ["python3", "bot/main.py"]
