@@ -1,0 +1,122 @@
+{
+  "Canada": {
+    "total": 122,
+    "has_email": 24,
+    "has_partner_page": 122,
+    "P1": 1,
+    "P2": 121,
+    "P3": 0
+  },
+  "USA": {
+    "total": 384,
+    "has_email": 87,
+    "has_partner_page": 384,
+    "P1": 74,
+    "P2": 282,
+    "P3": 6
+  },
+  "UK": {
+    "total": 163,
+    "has_email": 42,
+    "has_partner_page": 163,
+    "P1": 24,
+    "P2": 120,
+    "P3": 5
+  },
+  "Australia": {
+    "total": 67,
+    "has_email": 27,
+    "has_partner_page": 67,
+    "P1": 0,
+    "P2": 67,
+    "P3": 0
+  },
+  "Germany": {
+    "total": 27,
+    "has_email": 14,
+    "has_partner_page": 20,
+    "P1": 0,
+    "P2": 20,
+    "P3": 7
+  },
+  "Italy": {
+    "total": 41,
+    "has_email": 21,
+    "has_partner_page": 36,
+    "P1": 0,
+    "P2": 36,
+    "P3": 5
+  },
+  "Switzerland": {
+    "total": 30,
+    "has_email": 19,
+    "has_partner_page": 26,
+    "P1": 12,
+    "P2": 13,
+    "P3": 5
+  },
+  "Netherlands": {
+    "total": 41,
+    "has_email": 9,
+    "has_partner_page": 41,
+    "P1": 9,
+    "P2": 31,
+    "P3": 1
+  },
+  "Sweden": {
+    "total": 26,
+    "has_email": 11,
+    "has_partner_page": 0,
+    "P1": 7,
+    "P2": 8,
+    "P3": 11
+  },
+  "Japan": {
+    "total": 18,
+    "has_email": 4,
+    "has_partner_page": 16,
+    "P1": 4,
+    "P2": 4,
+    "P3": 1
+  },
+  "France": {
+    "total": 52,
+    "has_email": 14,
+    "has_partner_page": 52,
+    "P1": 13,
+    "P2": 32,
+    "P3": 7
+  },
+  "Spain": {
+    "total": 63,
+    "has_email": 4,
+    "has_partner_page": 24,
+    "P1": 10,
+    "P2": 17,
+    "P3": 36
+  },
+  "Denmark": {
+    "total": 11,
+    "has_email": 4,
+    "has_partner_page": 0,
+    "P1": 2,
+    "P2": 3,
+    "P3": 0
+  },
+  "Hungary": {
+    "total": 33,
+    "has_email": 11,
+    "has_partner_page": 33,
+    "P1": 16,
+    "P2": 4,
+    "P3": 0
+  },
+  "New Zealand": {
+    "total": 56,
+    "has_email": 30,
+    "has_partner_page": 56,
+    "P1": 18,
+    "P2": 31,
+    "P3": 2
+  }
+}
